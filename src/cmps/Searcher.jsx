@@ -8,6 +8,8 @@ export default class Searcher extends Component {
   };
   handleSubmit = (ev) => {
     ev.preventDefault();
+    let { value } = this.state;
+    this.props.handleSubmit(value);
   };
 
   handleChange = (ev) => {
@@ -24,8 +26,7 @@ export default class Searcher extends Component {
         <TextField
           placeholder="Search"
           id="standard-basic"
-          label="Standard"
-          className="searcher-search"
+          label="Search"
           onChange={(ev) => this.handleChange(ev)}
         />
 

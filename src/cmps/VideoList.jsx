@@ -1,12 +1,12 @@
-import React from 'react'
-import VideoPreview from "../cmps/VideoPreview.jsx";
+import React from "react";
 
-export default function VideoList(props) {
+import { VideoPreview } from "../cmps/VideoPreview.jsx";
+export function VideoList(props) {
+  const { videos } = props;
 
-  console.log(props.videos);
   return (
-    <div className="video-list">
-      {props.videos.map((video, idx) => (
+    <div className="video-list-container">
+      {videos.map((video, idx) => (
         <VideoPreview key={idx} video={video} />
       ))}
     </div>

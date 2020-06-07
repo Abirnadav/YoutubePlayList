@@ -1,41 +1,36 @@
-import React from 'react'
-import VideoList from '../cmps/VideoList'
-import Searcher from '../cmps/Searcher'
-import serviceTube from '../services/serviceTube'
+import React from "react";
+import { VideoList } from "../cmps/VideoList";
+import Searcher from "../cmps/Searcher";
+import serviceTube from "../services/serviceTube";
 
 export class Home extends React.Component {
+  state = {
+    videos: null,
+  };
 
-    state = {
-        videos: null
-    };
+  async componentDidMount() {
+    const videos = await serviceTube.query("Maroon");
 
-    async componentDidMount() {
+    this.setState({ videos }, () => {
+      console.log(this.state);
+    });
+  }
+  componentDidUpdate() {}
 
-        const videos = await serviceTube.query('Maroon');
+  handleSubmit = async (searchValue) => {
+    const videos = await serviceTube.query(searchValue);
+    this.setState({ videos });
+  };
 
-        this.setState({ videos }, () => {
-            console.log(this.state)
-        });
+  render() {
+    const { videos } = this.state;
 
-    }
-    componentDidUpdate() {
-
-    }
-
-    render() {
-
-        const { videos } = this.state;
-
-        return (
-            <main className="main-home grid">
-                <Searcher />
-                {(videos)
-                    ?
-                    <VideoList videos={videos} />
-                    : null
-                }
-                <aside className="youtube-video"></aside>
-            </main>
-        )
-    }
-};
+    return (
+      <main className="main-home grid">
+        <Searcher handleSubmit={this.handleSubmit} />
+        {videos && <VideoList videos={videos} />}
+        <aside className="youtube-video"></aside>
+      </main>
+    );
+  }
+}
