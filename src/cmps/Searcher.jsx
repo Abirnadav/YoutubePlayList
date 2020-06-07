@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 export default class Searcher extends Component {
   state = {
@@ -20,10 +21,13 @@ export default class Searcher extends Component {
         onSubmit={(ev) => this.handleSubmit(ev)}
       >
         <TextField
+          placeholder="Search"
           id="standard-basic"
           label="Standard"
           onChange={(ev) => this.handleChange(ev)}
         />
+
+        <Button variant="outlined">Search</Button>
       </form>
     );
   }
