@@ -17,21 +17,20 @@ export default class Searcher extends Component {
   };
   render() {
     return (
-      <form
-        noValidate
-        autoComplete="off"
-        onSubmit={(ev) => this.handleSubmit(ev)}
-        className="searcher-form"
-      >
+      <>
         <TextField
+          autoComplete="off"
+          onSubmit={(ev) => this.handleSubmit(ev)}
           placeholder="Search"
           id="standard-basic"
           label="Search"
           onChange={(ev) => this.handleChange(ev)}
         />
 
-        <Button variant="outlined">Search</Button>
-      </form>
+        <Button variant="outlined" onClick={(ev) => this.handleSubmit(ev)}>
+          Search
+        </Button>
+      </>
     );
   }
 }
