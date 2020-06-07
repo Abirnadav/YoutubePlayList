@@ -9,7 +9,7 @@ export default {
 // });
 
 async function query(value) {
-    var YT_KEY = 'AIzaSyD9IOfZplKCpkxaQjmSrqGWpz9Wnmha514';
+    var YT_KEY = 'AIzaSyDdrOp9dEzjmZ4B1lqvrGh_rMhqmTkryG8&q';
     const res = await Axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet
     &videoEmbeddable=true&type=video&key=${YT_KEY}&q=${value}`)
     return res.data.items
