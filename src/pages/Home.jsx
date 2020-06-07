@@ -70,10 +70,11 @@ export class Home extends React.Component {
       <main className="main-home flex column justify-start ">
         <div className="header-container  flex space-between ">
           <div className="header-content flex justify-content align-center">
+            <img className="player-img" src={player}></img>
+
             <h2>
               Code<span>Tube</span>
             </h2>
-            <img className="player-img" src={player}></img>
           </div>
           <Searcher handleSubmit={this.handleSubmit} />
         </div>
