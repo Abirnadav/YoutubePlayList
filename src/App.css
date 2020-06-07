@@ -23,7 +23,7 @@
 }
 
 .video-preview-card {
-  height: 10vh;
+  /* height: 10vh; */
   width: 40vw;
   background-color: grey;
   padding: 10px 20px;

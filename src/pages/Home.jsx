@@ -1,5 +1,5 @@
 import React from "react";
-import VideoList from "../cmps/VideoList";
+import { VideoList } from "../cmps/VideoList";
 import Searcher from "../cmps/Searcher";
 import serviceTube from "../services/serviceTube";
 
@@ -23,7 +23,7 @@ export class Home extends React.Component {
     return (
       <main className="main-home grid">
         <Searcher />
-        {/* <VideoList videos={videos} /> */}
+        {videos && <VideoList videos={videos} />}
         <aside className="youtube-video"></aside>
       </main>
     );
