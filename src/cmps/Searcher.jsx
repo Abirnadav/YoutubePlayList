@@ -8,6 +8,8 @@ export default class Searcher extends Component {
   };
   handleSubmit = (ev) => {
     ev.preventDefault();
+    let { value } = this.state;
+    this.props.handleSubmit(value);
   };
 
   handleChange = (ev) => {
@@ -19,6 +21,7 @@ export default class Searcher extends Component {
         noValidate
         autoComplete="off"
         onSubmit={(ev) => this.handleSubmit(ev)}
+        className="searcher-form"
       >
         <TextField
           placeholder="Search"

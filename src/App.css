@@ -1,10 +1,38 @@
 .main-home {
-  
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". searcher searcher searcher ."
+    "videoList videoList . youtubeVideo youtubeVideo"
+    "videoList videoList . youtubeVideo youtubeVideo";
 }
 
+.video-list {
+  grid-area: videoList;
+}
+.searcher-form {
+  grid-area: searcher;
+}
+.youtube-video {
+  grid-area: youtubeVideo;
+}
 
-
- /* HELPERS */
+/* HELPERS */
 .grid {
   display: grid;
+}
+
+.video-preview-card {
+  /* height: 10vh; */
+  width: 40vw;
+  background-color: grey;
+  padding: 10px 20px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  border-radius: 5px;
+}
+
+.video-list-container {
+  width: 45vw;
+  background-color: blue;
 }

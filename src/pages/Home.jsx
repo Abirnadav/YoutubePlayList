@@ -1,24 +1,35 @@
 import React from "react";
+import { VideoList } from "../cmps/VideoList";
 import Searcher from "../cmps/Searcher";
-// import { VideoList } from '../cmps/VideoList'
-// import { VideoPreview } from '../cmps/VideoPreview'
+import serviceTube from "../services/serviceTube";
 
 export class Home extends React.Component {
   state = {
-    videos: [],
+    videos: null,
   };
 
-  componentDidMount() {}
+  async componentDidMount() {
+    const videos = await serviceTube.query("Maroon");
+
+    this.setState({ videos }, () => {
+      console.log(this.state);
+    });
+  }
   componentDidUpdate() {}
+
+  handleSubmit = async (searchValue) => {
+    const videos = await serviceTube.query(searchValue);
+    this.setState({ videos });
+  };
 
   render() {
     const { videos } = this.state;
 
     return (
       <main className="main-home grid">
-        {/* <VideoList videos={videos} /> */}
-
-        <Searcher />
+        <Searcher handleSubmit={this.handleSubmit} />
+        {videos && <VideoList videos={videos} />}
+        <aside className="youtube-video"></aside>
       </main>
     );
   }
