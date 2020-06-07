@@ -1,8 +1,21 @@
 .main-home {
-  
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". searcher searcher searcher ."
+    "videoList videoList . youtubeVideo youtubeVideo"
+    "videoList videoList . youtubeVideo youtubeVideo";
 }
 
-
+.video-list {
+  grid-area: videoList;
+}
+.searcher-form {
+  grid-area: searcher;
+}
+.youtube-video {
+  grid-area: youtubeVideo;
+}
 
  /* HELPERS */
 .grid {
