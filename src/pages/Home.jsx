@@ -3,6 +3,7 @@ import { VideoList } from "../cmps/VideoList";
 import Searcher from "../cmps/Searcher";
 import serviceTube from "../services/serviceTube";
 import VideoPlayer from "../cmps/VideoPlayer";
+import player from "../player.png";
 export class Home extends React.Component {
   state = {
     videos: null,
@@ -68,9 +69,12 @@ export class Home extends React.Component {
     return (
       <main className="main-home flex column justify-start ">
         <div className="header-container  flex space-between ">
-          <h2>
-            Code<span>Tube</span>
-          </h2>
+          <div className="header-content flex justify-content align-center">
+            <h2>
+              Code<span>Tube</span>
+            </h2>
+            <img className="player-img" src={player}></img>
+          </div>
           <Searcher handleSubmit={this.handleSubmit} />
         </div>
 
