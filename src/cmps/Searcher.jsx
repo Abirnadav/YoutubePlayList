@@ -23,7 +23,7 @@ export default class Searcher extends Component {
         <TextField
           placeholder="Search"
           id="standard-basic"
-          label="Standard"
+          label="Search"
           onChange={(ev) => this.handleChange(ev)}
         />
 

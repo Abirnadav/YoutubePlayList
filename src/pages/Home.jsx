@@ -1,31 +1,25 @@
-import React from 'react'
+import React from "react";
+import Searcher from "../cmps/Searcher";
 // import { VideoList } from '../cmps/VideoList'
 // import { VideoPreview } from '../cmps/VideoPreview'
 
-
 export class Home extends React.Component {
+  state = {
+    videos: [],
+  };
 
-    state = {
-        videos: []
-    };
+  componentDidMount() {}
+  componentDidUpdate() {}
 
-    componentDidMount() {
+  render() {
+    const { videos } = this.state;
 
-    }
-    componentDidUpdate() {
+    return (
+      <main className="main-home grid">
+        {/* <VideoList videos={videos} /> */}
 
-    }
-
-    render() {
-        
-        const { videos } = this.state;
-
-        return (
-            <main className="main-home grid">
-
-                {/* <VideoList videos={videos} /> */}
-
-            </main>
-        )
-    }
-};
+        <Searcher />
+      </main>
+    );
+  }
+}
