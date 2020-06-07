@@ -13,6 +13,12 @@ export default class Searcher extends Component {
     this.props.handleSubmit(value);
   };
 
+  handleKeySubmit = (ev) => {
+    console.log(ev.keyCode);
+    if (ev.keyCode !== 13) return;
+    this.handleSubmit(ev);
+  };
+
   handleChange = (ev) => {
     console.log("Searcher -> handleChange -> ev.target.value", ev.target.value);
     this.setState({ value: ev.target.value });
@@ -21,6 +27,7 @@ export default class Searcher extends Component {
     return (
       <div className="searcher-form flex align-end justify-center">
         <TextField
+          onKeyUp={(ev) => this.handleKeySubmit(ev)}
           autoComplete="off"
           onSubmit={(ev) => this.handleSubmit(ev)}
           label="Search"
