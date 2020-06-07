@@ -13,7 +13,7 @@ export function VideoPreview(props) {
         <p onClick={() => setCurrVideo(video)} className="song-info">
           {video.snippet.title ? video.snippet.title : "NO TITLE"}
         </p>
-
+        <span>{Math.random()}</span>
         <span>{video.snippet.publishedAt}</span>
       </div>
     </div>
