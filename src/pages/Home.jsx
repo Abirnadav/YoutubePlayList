@@ -17,12 +17,17 @@ export class Home extends React.Component {
   }
   componentDidUpdate() {}
 
+  handleSubmit = async (searchValue) => {
+    const videos = await serviceTube.query(searchValue);
+    this.setState({ videos });
+  };
+
   render() {
     const { videos } = this.state;
 
     return (
       <main className="main-home grid">
-        <Searcher />
+        <Searcher handleSubmit={this.handleSubmit} />
         {videos && <VideoList videos={videos} />}
         <aside className="youtube-video"></aside>
       </main>
