@@ -85,30 +85,39 @@
 
 /* VIDEO PREVIEW */
 .video-preview-card {
-  cursor: pointer;
   width: 40vw;
-  background-color: rgba(128, 128, 128, 0.226);
+  /* background-color: rgba(128, 128, 128, 0.226); */
   padding: 10px 20px;
   margin: 0 auto;
   margin-bottom: 35px;
   border-radius: 5px;
 }
 .video-preview-card:hover {
-  background-color: rgba(190, 190, 190, 0.226);
+  background-color: rgba(190, 190, 190, 0.116);
 }
 
-.video-preview-card h3 {
+.video-preview-card p {
   color: rgba(0, 0, 0, 0.904);
   font-size: 14px;
   padding: 0px;
+  cursor: pointer;
+}
+
+.video-preview-card p:hover {
+  color: rgb(0, 0, 0);
 }
 .video-preview-card img {
   width: 250px;
+  cursor: pointer;
+
   margin-bottom: 5px;
 }
 .video-preview-card span {
   color: rgba(128, 128, 128, 0.329);
   font-size: 13px;
+}
+.video-preview-card span:hover {
+  color: rgba(53, 52, 52, 0.575);
 }
 
 .video-list-container {
@@ -118,6 +127,6 @@
 }
 
 .video-details-container {
-  padding: 5px 15px;
-  margin-top: 0px;
+  padding: 0px 15px;
+  margin-top: -14px;
 }
