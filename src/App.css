@@ -14,6 +14,10 @@
 .main-home span {
   color: #282828;
 }
+.youtube-video h3 {
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.822);
+}
 
 .header-container {
   width: 90vw;
