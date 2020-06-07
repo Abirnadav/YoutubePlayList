@@ -19,7 +19,8 @@ export default class Searcher extends Component {
   };
   render() {
     return (
-      <>
+      <div className="searcher-form flex align-center justify-center">
+
         <TextField
           autoComplete="off"
           onSubmit={(ev) => this.handleSubmit(ev)}
@@ -33,7 +34,7 @@ export default class Searcher extends Component {
         <Button variant="outlined" onClick={(ev) => this.handleSubmit(ev)}>
           Search
         </Button>
-      </>
+      </div>
     );
   }
 }
