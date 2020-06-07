@@ -5,8 +5,8 @@ export default function VideoPlayer(props) {
     <>
       <iframe
         className="flex column"
-        width="420"
-        height="315"
+        width="620"
+        height="415"
         src={`https://www.youtube.com/embed/${props.item.id.videoId}`}
       ></iframe>
 

@@ -52,6 +52,7 @@ export class Home extends React.Component {
   componentDidUpdate() {}
 
   handleSubmit = async (searchValue) => {
+    this.setState({ videos: null });
     const videos = await serviceTube.query(searchValue);
     this.setState({ videos });
   };
@@ -65,19 +66,26 @@ export class Home extends React.Component {
     const { videos, currVideo } = this.state;
 
     return (
-      <main className="main-home flex column align-center">
-        <h2>
-          Code<span>Tube</span>
-        </h2>
-        <Searcher handleSubmit={this.handleSubmit} />
-        <section className="home-video-content flex align-start space-evenly">
-          {videos && (
-            <VideoList setCurrVideo={this.setCurrVideo} videos={videos} />
-          )}
-          <aside className="youtube-video">
-            <VideoPlayer item={currVideo}></VideoPlayer>
-          </aside>
-        </section>
+      <main className="main-home flex column justify-start ">
+        <div className="header-container  flex space-between ">
+          <h2>
+            Code<span>Tube</span>
+          </h2>
+          <Searcher handleSubmit={this.handleSubmit} />
+        </div>
+
+        <div className="home-video-container flex">
+          <section className="home-video-content flex align-start space-evenly">
+            <div className="video-list-area">
+              {videos && (
+                <VideoList setCurrVideo={this.setCurrVideo} videos={videos} />
+              )}
+            </div>
+            <aside className="youtube-video">
+              <VideoPlayer item={currVideo}></VideoPlayer>
+            </aside>
+          </section>
+        </div>
       </main>
     );
   }
