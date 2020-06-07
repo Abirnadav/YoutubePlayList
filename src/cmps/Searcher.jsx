@@ -9,21 +9,23 @@ export default class Searcher extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     let { value } = this.state;
+    console.log("Searcher -> handleSubmit -> value", value);
     this.props.handleSubmit(value);
   };
 
   handleChange = (ev) => {
+    console.log("Searcher -> handleChange -> ev.target.value", ev.target.value);
     this.setState({ value: ev.target.value });
   };
   render() {
     return (
-      <>
+      <div className="searcher-form flex align-end justify-center">
         <TextField
           autoComplete="off"
           onSubmit={(ev) => this.handleSubmit(ev)}
-          placeholder="Search"
-          id="standard-basic"
           label="Search"
+          id="standard-basic"
+          placeholder="Enter your song name"
           className="searcher-field"
           onChange={(ev) => this.handleChange(ev)}
         />
@@ -31,7 +33,7 @@ export default class Searcher extends Component {
         <Button variant="outlined" onClick={(ev) => this.handleSubmit(ev)}>
           Search
         </Button>
-      </>
+      </div>
     );
   }
 }

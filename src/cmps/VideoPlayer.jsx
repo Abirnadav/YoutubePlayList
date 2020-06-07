@@ -1,13 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class VideoPlayer extends Component {
-  render() {
-    return (
+export default function VideoPlayer(props) {
+  return (
+    <>
       <iframe
+        className="flex column"
         width="420"
         height="315"
-        src={`https://www.youtube.com/embed/${this.props.item.id.videoId}`}
+        src={`https://www.youtube.com/embed/${props.item.id.videoId}`}
       ></iframe>
-    );
-  }
+
+      <h3>{props.item.snippet.title}</h3>
+    </>
+  );
 }
