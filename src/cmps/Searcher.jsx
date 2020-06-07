@@ -24,6 +24,7 @@ export default class Searcher extends Component {
           placeholder="Search"
           id="standard-basic"
           label="Search"
+          className="searcher-field"
           onChange={(ev) => this.handleChange(ev)}
         />
 

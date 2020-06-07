@@ -1,10 +1,6 @@
 .main-home {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    ". searcher searcher searcher ."
-    "videoList videoList . youtubeVideo youtubeVideo"
-    "videoList videoList . youtubeVideo youtubeVideo";
+  height: 100vh;
+  background-color: tomato;
 }
 
 .video-list {
@@ -12,16 +8,67 @@
 }
 .searcher-form {
   grid-area: searcher;
+  width: 100%;
+  margin: 10px auto 20px;
+  padding: 10px 0;
+  background-color: white;
 }
+.searcher-field {
+  width: 75%;
+  max-width: 600px;
+  
+}
+
+.searcher-form .searcher-field {
+  margin-right: 10px;
+}
+
 .youtube-video {
   grid-area: youtubeVideo;
 }
 
-/* HELPERS */
+.searcher-search {
+    width: 75%;
+    
+}
+
+.searcher-form .searcher-search {
+  margin-right: 10px;
+}
+
+.searcher-btn {
+
+}
+
+ /* HELPERS */
 .grid {
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.column {
+  flex-direction: column;
+}
+
+
+/* VIDEO PREVIEW */
 .video-preview-card {
   /* height: 10vh; */
   width: 40vw;
