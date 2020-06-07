@@ -1,15 +1,9 @@
 export default function VideoPreview(props) {
-  const { video } = props3;
+  const { video } = props;
   return (
-    <article
-      className="video-preview"
-      onClick={() => props.onSelectVideo(props.video)}
-    >
-      <img src={`https://robohash.org/${video.id}`} alt="" />
-      <p>Vendor: {video.name}</p>
-      <p>Price: {video.url}</p>
-
-      <button onchange="changestuts"></button>
-    </article>
+    <div class="video-preview-container">
+      <img src={video.src} alt="im a video" />
+      <h3 class="song-info">{video.title}</h3>
+    </div>
   );
 }
