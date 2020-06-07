@@ -12,13 +12,15 @@ export class Home extends React.Component {
     const videos = await serviceTube.query("Maroon");
 
     this.setState({ videos }, () => {
-      console.log(this.state);
+      console.log("DID MOUNT VIDEOS", this.state);
     });
   }
   componentDidUpdate() {}
 
   handleSubmit = async (searchValue) => {
+    console.log("handleSubmit -> searchValue", searchValue);
     const videos = await serviceTube.query(searchValue);
+    console.log("handleSubmit -> videos", videos);
     this.setState({ videos });
   };
 
