@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function VideoPreview(props) {
   const { video } = props;
   return (

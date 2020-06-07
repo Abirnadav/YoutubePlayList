@@ -1,4 +1,6 @@
+import React from 'react'
 import VideoPreview from "../cmps/VideoPreview.jsx";
+
 export default function VideoList(props) {
   return (
     <div className="video-list">

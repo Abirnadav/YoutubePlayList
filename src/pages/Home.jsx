@@ -1,6 +1,6 @@
 import React from 'react'
-// import { VideoList } from '../cmps/VideoList'
-// import { VideoPreview } from '../cmps/VideoPreview'
+import VideoList from '../cmps/VideoList'
+import VideoPreview from '../cmps/VideoPreview'
 
 
 export class Home extends React.Component {
@@ -23,7 +23,7 @@ export class Home extends React.Component {
         return (
             <main className="main-home grid">
 
-                {/* <VideoList videos={videos} /> */}
+                <VideoList videos={videos} />
 
             </main>
         )
