@@ -19,7 +19,7 @@ export default class Searcher extends Component {
   };
   render() {
     return (
-      <div className="flex">
+      <div className="flex search-bar">
         <TextField
           autoComplete="off"
           onSubmit={(ev) => this.handleSubmit(ev)}
