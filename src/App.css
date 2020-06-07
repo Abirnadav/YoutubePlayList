@@ -85,6 +85,7 @@
 
 /* VIDEO PREVIEW */
 .video-preview-card {
+  cursor: pointer;
   width: 40vw;
   background-color: rgba(128, 128, 128, 0.226);
   padding: 10px 20px;

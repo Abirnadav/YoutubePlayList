@@ -24,6 +24,7 @@ export class Home extends React.Component {
   };
 
   setCurrVideo = (currVideo) => {
+    console.log("setCurrVideo -> currVideo", currVideo);
     this.setState({ currVideo });
   };
 
