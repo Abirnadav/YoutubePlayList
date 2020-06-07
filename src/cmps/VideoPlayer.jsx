@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 export default class VideoPlayer extends Component {
+  componentDidMount() {
+    console.log("hello", this.props);
+  }
   render() {
     return (
       <>
