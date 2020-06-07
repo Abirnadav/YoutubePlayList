@@ -29,7 +29,11 @@ export class Home extends React.Component {
         return (
             <main className="main-home grid">
                 <Searcher />
-                {/* <VideoList videos={videos} /> */}
+                {(videos)
+                    ?
+                    <VideoList videos={videos} />
+                    : null
+                }
                 <aside className="youtube-video"></aside>
             </main>
         )

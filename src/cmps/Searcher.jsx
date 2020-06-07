@@ -19,16 +19,17 @@ export default class Searcher extends Component {
         noValidate
         autoComplete="off"
         onSubmit={(ev) => this.handleSubmit(ev)}
-        className="searcher-form"
+        className="searcher-form flex align-center justify-center"
       >
         <TextField
           placeholder="Search"
           id="standard-basic"
           label="Standard"
+          className="searcher-search"
           onChange={(ev) => this.handleChange(ev)}
         />
 
-        <Button variant="outlined">Search</Button>
+        <Button variant="outlined" className="searcher-btn">Search</Button>
       </form>
     );
   }
