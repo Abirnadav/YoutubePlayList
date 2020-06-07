@@ -23,9 +23,8 @@
 }
 
 .video-preview-card {
-  /* height: 10vh; */
   width: 40vw;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.226);
   padding: 10px 20px;
   margin: 0 auto;
   margin-bottom: 35px;
@@ -34,5 +33,6 @@
 
 .video-list-container {
   width: 45vw;
-  background-color: blue;
+  padding: 20px 0px;
+  /* height: 80vh; */
 }

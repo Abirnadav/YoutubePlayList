@@ -3,19 +3,14 @@ import React from "react";
 export function VideoPreview(props) {
   const { video } = props;
   return (
-    <div className="video-preview-card">
-      <h3 className="song-info">{video.title ? video.title : "NO TITLE"}</h3>
+    <div className="video-preview-card flex column a-center j-center">
+      <h3 className="song-info">
+        {video.snippet.title ? video.snippet.title : "NO TITLE"}
+      </h3>
 
+      {/* <p>{video.snippet}</p> */}
       <img alt="IMG OF VIDEO" src={video.snippet.thumbnails.medium.url}></img>
-      {/* 
-      <iframe
-        width="250"
-        height="250"
-        src={
-          video.src ? video.src : "https://www.youtube.com/embed/EvCyJ8WfFEs"
-        }
-        alt="im a video"
-      /> */}
+      <span>{video.snippet.publishedAt}</span>
     </div>
   );
 }
