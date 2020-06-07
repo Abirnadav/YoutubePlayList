@@ -1,21 +1,17 @@
 import React from "react";
 
 export function VideoPreview(props) {
-  const { video } = props;
+  const { video, setCurrVideo } = props;
   return (
-    <div className="video-preview-card">
-      <h3 className="song-info">{video.title ? video.title : "NO TITLE"}</h3>
-
+    <div onClick={setCurrVideo} className="video-preview-card flex ">
       <img alt="IMG OF VIDEO" src={video.snippet.thumbnails.medium.url}></img>
-      {/* 
-      <iframe
-        width="250"
-        height="250"
-        src={
-          video.src ? video.src : "https://www.youtube.com/embed/EvCyJ8WfFEs"
-        }
-        alt="im a video"
-      /> */}
+      <div className="video-details-container flex align-start column space-between ">
+        <p className="song-info">
+          {video.snippet.title ? video.snippet.title : "NO TITLE"}
+        </p>
+
+        <span>{video.snippet.publishedAt}</span>
+      </div>
     </div>
   );
 }
