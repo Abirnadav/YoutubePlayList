@@ -11,11 +11,7 @@ export class Home extends React.Component {
     };
 
     componentDidMount() {
-        this.setState({videos:serviceTube.query('hello')},()=>{
-            console.log(this.state.videos);
-            
-        })
-
+    
     }
     componentDidUpdate() {
 
