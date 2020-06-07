@@ -1,15 +1,20 @@
 import React from 'react'
 // import { VideoList } from '../cmps/VideoList'
 // import { VideoPreview } from '../cmps/VideoPreview'
+import serviceTube from '../services/serviceTube'
 
 
 export class Home extends React.Component {
 
     state = {
-        videos: []
+        videos: null
     };
 
     componentDidMount() {
+        this.setState({videos:serviceTube.query('hello')},()=>{
+            console.log(this.state.videos);
+            
+        })
 
     }
     componentDidUpdate() {
@@ -22,7 +27,7 @@ export class Home extends React.Component {
 
         return (
             <main className="main-home grid">
-
+                
                 {/* <VideoList videos={videos} /> */}
 
             </main>
