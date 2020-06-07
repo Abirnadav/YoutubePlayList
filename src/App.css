@@ -16,7 +16,7 @@
 .searcher-form {
   grid-area: searcher;
   width: 100%;
-  margin: 10px auto 20px;
+  margin: auto auto 20px;
   padding: 10px 0;
   background-color: white;
 }
@@ -41,7 +41,10 @@
   margin-right: 10px;
 }
 
-.searcher-btn {
+.home-video-content {
+  padding-top: 20px;
+  width: 100%;
+  background-color: #ff6565;
 }
 
 /* HELPERS */
@@ -65,6 +68,9 @@
 }
 .space-between {
   justify-content: space-between;
+}
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .column {
@@ -122,7 +128,8 @@
 
 .video-list-container {
   width: 45vw;
-  padding: 20px 0px;
+  min-width: 571px;
+  /* padding: 20px 0px; */
   /* height: 80vh; */
 }
 

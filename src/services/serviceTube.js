@@ -181,11 +181,10 @@ var gVideos = [
 // });
 
 async function query(value) {
-    return gVideos;
-    // var YT_KEY = 'AIzaSyDdrOp9dEzjmZ4B1lqvrGh_rMhqmTkryG8';
-    // const res = await Axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet
-    // &videoEmbeddable=true&type=video&key=${YT_KEY}&q=${value}`)
-    // return res.data.items
+    var YT_KEY = 'AIzaSyDdrOp9dEzjmZ4B1lqvrGh_rMhqmTkryG8';
+    const res = await Axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet
+    &videoEmbeddable=true&type=video&key=${YT_KEY}&q=${value}`)
+    return res.data.items
 }
 
 // https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=AIzaSyD9IOfZplKCpkxaQjmSrqGWpz9Wnmha514/getRating&q=${value}`

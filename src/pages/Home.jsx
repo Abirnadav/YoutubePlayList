@@ -70,7 +70,7 @@ export class Home extends React.Component {
           Code<span>Tube</span>
         </h2>
         <Searcher handleSubmit={this.handleSubmit} />
-        <section className="home-video-content flex align-start space-between">
+        <section className="home-video-content flex align-start space-evenly">
           {videos && (
             <VideoList setCurrVideo={this.setCurrVideo} videos={videos} />
           )}

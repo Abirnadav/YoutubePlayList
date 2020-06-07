@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 export function VideoPreview(props) {
   const { video, setCurrVideo } = props;
@@ -14,7 +15,8 @@ export function VideoPreview(props) {
           {video.snippet.title ? video.snippet.title : "NO TITLE"}
         </p>
         <span>{Math.random()}</span>
-        <span>{video.snippet.publishedAt}</span>
+
+        <span>{moment(video.snippet.publishedAt).format("ll")}</span>
       </div>
     </div>
   );
