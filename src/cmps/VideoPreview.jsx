@@ -7,7 +7,7 @@ export function VideoPreview(props) {
     <div
       className="video-preview-card flex fade-in "
       style={{
-        animationDelay: idx * 0.1 + "s",
+        animationDelay: idx * 0.3 + "s",
       }}
     >
       <img
@@ -20,7 +20,7 @@ export function VideoPreview(props) {
         <p onClick={() => setCurrVideo(video)} className="song-info">
           {video.snippet.title ? video.snippet.title : "NO TITLE"}
         </p>
-        <span>{Math.random()}</span>
+        {/* <span>{Math.random()}</span> */}
 
         <span>{moment(video.snippet.publishedAt).format("ll")}</span>
       </div>
