@@ -19,13 +19,13 @@ export default class Searcher extends Component {
   };
   render() {
     return (
-      <>
+      <div className="flex">
         <TextField
           autoComplete="off"
           onSubmit={(ev) => this.handleSubmit(ev)}
-          placeholder="Search"
-          id="standard-basic"
           label="Search"
+          id="standard-basic"
+          placeholder="Enter your song name"
           className="searcher-field"
           onChange={(ev) => this.handleChange(ev)}
         />
@@ -33,7 +33,7 @@ export default class Searcher extends Component {
         <Button variant="outlined" onClick={(ev) => this.handleSubmit(ev)}>
           Search
         </Button>
-      </>
+      </div>
     );
   }
 }
